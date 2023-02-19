@@ -4,7 +4,7 @@ plugins {
     `java-library`
 }
 
-group = "com.github.simulatan"
+group = "io.github.simulatan"
 version = "1.0.0"
 
 repositories {
@@ -18,9 +18,14 @@ dependencies {
 }
 
 gradlePlugin {
+    website.set("https://github.com/SIMULATAN/gradle-reflections-plugin")
+    vcsUrl.set("https://github.com/SIMULATAN/gradle-reflections-plugin.git")
     plugins {
         create("reflectionsPlugin") {
-            id = "com.github.simulatan.gradle-reflections-plugin"
+            id = "io.github.simulatan.gradle-reflections-plugin"
+            displayName = "Reflections Plugin"
+            description = "Bakes in reflection results at compile time"
+            tags.set(listOf("reflections"))
             implementationClass = "com.github.simulatan.gradle.plugin.reflections.ReflectionsPlugin"
         }
     }

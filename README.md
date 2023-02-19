@@ -10,9 +10,6 @@ at build-time, allowing run-time querying without the indexing performance hit.
 - [Usage](#usage)
     - [Gradle](#gradle)
     - [Java](#java)
-- [Development](#development)
-    - [Quickstart](#quickstart)
-    - [Tests](#tests)
 
 <!-- /TOC -->
 
@@ -38,15 +35,16 @@ then utilise the embedded index at runtime using Reflections.collect(). See the 
 
 ### Gradle
 
-<!-- TODO: The plugin is published in [Gradle plugin portal](https://plugins.gradle.org/plugin/io.github.manosbatsis.gradle.plugin.reflections),
-so it is rather easy to use. -->
+The plugin is published in [Gradle plugin portal](https://plugins.gradle.org/plugin/io.github.simulatan.gradle-reflections-plugin),
+so it is rather easy to use.
+
 This will add the pre-scanned
 metadata index in your jar as `META-INF/reflections/PROJECTNAME-reflections.xml`, with
 *PROJECTNAME* substituted by your actual project name.
 
 ```gradle
 plugins {
-	id "com.github.simulatan.gradle-reflections-plugin" version "1.0.0"
+	id "io.github.simulatan.gradle-reflections-plugin" version "1.0.0"
 }
 
 classes {
