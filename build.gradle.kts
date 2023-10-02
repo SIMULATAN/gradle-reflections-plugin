@@ -5,10 +5,15 @@ plugins {
 }
 
 group = "io.github.simulatan"
-version = "1.0.0"
+version = "2.0.0"
 
 repositories {
     mavenCentral()
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 dependencies {
